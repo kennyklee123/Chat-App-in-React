@@ -1,0 +1,45 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6      
+
+PS E:\CodingProjects\CHAT-APP> cd server/
+PS E:\CodingProjects\CHAT-APP\server> npm start
+
+> server@1.0.0 start E:\CodingProjects\CHAT-APP\server
+> nodemon index.js
+
+[nodemon] 2.0.4
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+Server has started on port 5000
+E:\CodingProjects\CHAT-APP\server\index.js:58
+        io.to(user.room).emit('message', { user: user.name, text: message });
+message });
+                   ^
+
+TypeError: Cannot read property 'room' of undefined               .js:58:20)
+    at Socket.<anonymous> (E:\CodingProjects\CHAT-APP\server\index.js:58:20)                                                        b\socket.js:528:12
+    at Socket.emit (events.js:310:20)                             79:11)
+    at E:\CodingProjects\CHAT-APP\server\node_modules\socket.io\li.b\socket.js:528:12
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+Server has started on port 5000
+E:\CodingProjects\CHAT-APP\server\index.js:58
+        io.to(user.room).emit('message', { user: user.name, text: 
+message });
+                   ^
+
+TypeError: Cannot read property 'room' of undefined
+    at Socket.<anonymous> (E:\CodingProjects\CHAT-APP\server\index.js:58:20)
+    at Socket.emit (events.js:310:20)
+    at E:\CodingProjects\CHAT-APP\server\node_modules\socket.io\lib\socket.js:528:12
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+Server has started on port 5000
