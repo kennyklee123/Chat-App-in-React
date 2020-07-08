@@ -1,7 +1,9 @@
 const express = require('express'); //no important statements since we are in the node and we import it via require
 const socketio = require('socket.io');
 const http = require('http');
-const cors = require('cors');
+const cors = require('cors'); //we used cors since heroku is used for backend, netlify is used for frontend, we need to connect them
+//we need cors in this file or else some of our requests(sockets) will be ignored and or  not accepted
+//when we deploy the website sometimes it restricts the resources that are being sent
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require ('./users.js');
 
@@ -12,14 +14,15 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);  //this is an instance of the socketio
 
-app.use(cors());
 app.use(router);
+app.use(cors());
+
 
 //This part is for socket.io
 
 /*The socket will be connected as a client side socket
     and we manage this socket that is just connected in here as well hence why we also have the disconnection in here.
-    IT is an instance of a socket.
+    It is an instance of a socket that we use. 
   On Join
     When the socket reads the string join, it calls a call back function.
     The call back function's parameters is an object with name and room.
