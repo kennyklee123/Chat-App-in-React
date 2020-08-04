@@ -20,7 +20,15 @@ html, body {
     align-items: center;
     background-color: #1A1A1D;
   }
-  
+.joinAboutContainer{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #1A1A1D;
+    border-radius: 8px;
+    height: 60%;
+    width: 35%;
+}
   .joinInnerContainer {
     width: 20%;
   }

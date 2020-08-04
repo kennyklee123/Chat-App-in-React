@@ -36,6 +36,8 @@ MESSAGES
     USer generated are 'sendMessage'
     
 */
+
+//usually its server.on('request(event name)', requestListener( a function))
 io.on('connection', (socket) => {
     socket.on('join', ({name, room}, callback) => {
         const { error, user } = addUser({ id: socket.id, name, room}); //add user function can only return 2 things a user with error property or user property

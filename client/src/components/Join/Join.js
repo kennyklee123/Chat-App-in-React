@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
 import { Link } from 'react-router-dom'; //this is used to link to our /chat path
 import './Join.css'; // apply the styles
+import ProjectInfo from "../ProjectInfo/ProjectInfo";
 
 {/*WE do not transfer data through props or redux, we only pass data usng query strings, passing data through a url.
   we use an empty string as the initial value of our name state
@@ -12,7 +13,7 @@ const Join = () => {
 
     return (
       <div className = "joinOuterContainer">   
-          <div className = "joinInnerContainer">            
+          <div className = "joinInnerContainer">  
             <h1 className ="heading">Join</h1>
             {/*When users type something in this input an event occurs and we can grab data from it
             event.target.value holds our data, and then we set the output of this input to the corresponding variable.
@@ -28,8 +29,9 @@ const Join = () => {
             */}
             <Link onClick ={event => (!name || !room) ? event.preventDefault() : null} to ={`/chat?name=${name}&room=${room}`}>
                 <button className = "button mt-20" type="submit">Sign In</button>  {/*This button is used to sign in*/}
-            </Link>
-          </div>
+            </Link>  
+          </div> 
+          <ProjectInfo />
       </div>    
     )
 }

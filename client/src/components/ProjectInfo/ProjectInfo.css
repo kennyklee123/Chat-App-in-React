@@ -1,0 +1,17 @@
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    color: white;
+    height: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+#github{
+  color: rgb(231, 206, 206);
+}
+  @media (min-width: 320px) and (max-width: 1200px) {
+    .rightContainer{
+      display: none;
+    }
+  }
